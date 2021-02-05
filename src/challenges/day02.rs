@@ -55,10 +55,6 @@ pub fn run() {
 
     let entries: Vec<Entry> = data.iter().map(self::parse_entry).collect();
 
-    // for i in entries.iter() {
-    //     println!("{:#?}", i);
-    // }
-
     let policy_1_valid_count: usize = entries
         .iter()
         .map(Entry::is_valid_per_policy_1)
